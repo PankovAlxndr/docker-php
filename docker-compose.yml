@@ -7,6 +7,6 @@ services:
         - GID=${GID:-1000}
         - USER=${USER:-app}
     extra_hosts:
-      - "host.docker.internal:host-gateway"  # для работы x-debug, так как не во всех ОС есть хост host.docker.internal
+      - host.docker.internal:host-gateway  # для работы x-debug, так как не во всех ОС есть хост host.docker.internal
     volumes:
       - ./source-code:/application # source-code - ваш путь до папки с php кодом
