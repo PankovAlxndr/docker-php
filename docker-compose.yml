@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  php:
+    build:
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+        - USER=${USER:-app}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
